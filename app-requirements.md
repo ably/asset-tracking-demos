@@ -17,7 +17,7 @@ All apps:
 
 Publisher app (the rider):
 
-- May embed the MapBox access token in the app
+- May embed the Mapbox access token in the app
 - Must ensure that GPS permission is requested when using the app
 - Should create an AAT trackable when given an ID and a destination
 - Make sure the publish rate of GPS locations is dependent on the battery level and on whether someone is subscribing from the feed as well as proximity to destination
@@ -50,7 +50,7 @@ All apps:
 Publisher app (the rider):
 
 - Must use the backend service to accept delivery jobs
-- Must source MapBox access token from the backend service
+- Must source Mapbox access token from the backend service
 - Should make sure the publish rate of GPS locations is dependent on the battery level and on whether someone is subscribing from the feed as well as proximity to destination
 - Must support stacked deliveries - publishing updates for more than one trackable at any given time
 
@@ -67,7 +67,7 @@ Subscriber app (the consumer / customer):
 This milestone is yet to be scoped out fully but it is expected to add:
 
 - the concept of "rider state", likely including "accepted the delivery", "waiting at the merchant", "has picked up your deivery" / "is on the way", "is nearby", "is here" and "delivered"
-- capability to build the demo app to use MapBox maps rendering, instead of Google on Android/Web, or Apple on iOS - a choice that the app source code configuration should allow at build time (not a runtime switch)
+- capability to build the demo app to use Mapbox maps rendering, instead of Google on Android/Web, or Apple on iOS - a choice that the app source code configuration should allow at build time (not a runtime switch)
 - support for push notifications to the subscriber app, including key events such as when the delivery has been picked up from the merchant and when the item has been delivered
 
 ## Future Milestones
