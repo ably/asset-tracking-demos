@@ -21,11 +21,14 @@ Publisher app (the rider):
 - Should create an AAT trackable when given an ID and a destination
 - Make sure the publish rate of GPS locations is dependent on the battery level and on whether someone is subscribing from the feed as well as proximity to destination
 - Must continue to run when the app is sent to background
+- Only needs to support publishing of a single trackable at any given time
 
 Subscriber app (the consumer / customer):
 
+- Must allow an trackable ID to be entered to track
 - Must display a map, with a tracker showing the rider's location
 - May request GPS permission when using the app in order to show the user's current location, though this is not a requirement
+- Should only support tracking of a single trackable at any given time
 
 ## Milestone 2: Production
 
@@ -34,13 +37,17 @@ For this milestone we improve on the simplistic solution by bring in additional 
 All apps:
 
 - Must authenticate with Ably using token authentication
+- Must use [the demo backend service](https://github.com/ably/asset-tracking-backend-demo)
 
 Publisher app (the rider):
 
-- Make sure the publish rate of GPS locations is dependent on the battery level and on whether someone is subscribing from the feed as well as proximity to destination
+- Must use the backend service to accept delivery jobs
+- Should make sure the publish rate of GPS locations is dependent on the battery level and on whether someone is subscribing from the feed as well as proximity to destination
+- Must support stacked deliveries - publishing updates for more than one trackable at any given time
 
 Subscriber app (the consumer / customer):
 
+- Must use the backend service to generate an order for delivery - TBC whether this is simply by entering order id into the app, or perhaps by getting a list of active orders that can be accepted
 - Should configure the resolution based on the user’s behaviour (if the app is in the background, or the user is looking at a different page: we don’t need a high resolution)
 - Should ideally, when the tracker is 10 m from the address, remove the map and mention the food is here
 
