@@ -26,8 +26,9 @@ Publisher app (the rider):
 
 Subscriber app (the consumer / customer):
 
+- May embed the Google Maps API key in the app
 - Must allow an trackable ID to be entered to track
-- Must display a map, with a tracker showing the rider's location
+- Must display a map, using Google Maps, with a tracker showing the rider's location
 - May request GPS permission when using the app in order to show the user's current location, though this is not a requirement
 - Should only support tracking of a single trackable at any given time
 
@@ -51,6 +52,7 @@ Publisher app (the rider):
 Subscriber app (the consumer / customer):
 
 - Must use the backend service to generate an order for delivery - TBC whether this is simply by entering order id into the app, or perhaps by getting a list of active orders that can be accepted
+- Must source Google Maps API key from the backend service
 - Should configure the resolution based on the user’s behaviour (if the app is in the background, or the user is looking at a different page: we don’t need a high resolution)
 - Should ideally, when the tracker is 10 m from the address, remove the map and mention the food is here
 
