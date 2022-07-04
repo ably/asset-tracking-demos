@@ -22,3 +22,7 @@ Those deliveries could be food, groceries or other packages ordered for home del
   - [Android](https://github.com/ably/asset-tracking-android-customer-app-demo)
   - [iOS](https://github.com/ably/asset-tracking-ios-customer-app-demo)
   - Web (repository link TBC)
+
+## Requirements
+
+- [Demo Apps](app-requirements.md)
