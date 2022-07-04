@@ -69,3 +69,18 @@ This milestone is yet to be scoped out fully but it is expected to add:
 - the concept of "rider state", likely including "accepted the delivery", "waiting at the merchant", "has picked up your deivery" / "is on the way", "is nearby", "is here" and "delivered"
 - capability to build the demo app to use MapBox maps rendering, instead of Google on Android/Web, or Apple on iOS - a choice that the app source code configuration should allow at build time (not a runtime switch)
 - support for push notifications to the subscriber app, including key events such as when the delivery has been picked up from the merchant and when the item has been delivered
+
+## Future Milestones
+
+### Idea: Multiple Map Rendering Engines
+
+Dreaming big... This is something that would be really useful for demonstration purposes, in respect of showing performance - as well as behavioural - differences between different map rendering engines, when fed by Ably Asset Tracking.
+
+Engines include:
+
+- Here
+- Mapbox
+- Google Maps
+- Apple Maps
+- Bing Maps
+- Tencent
