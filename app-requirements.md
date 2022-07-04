@@ -23,6 +23,7 @@ Publisher app (the rider):
 - Make sure the publish rate of GPS locations is dependent on the battery level and on whether someone is subscribing from the feed as well as proximity to destination
 - Must continue to run when the app is sent to background
 - Only needs to support publishing of a single trackable at any given time
+- Should not display a map (unnecessary overhead)
 
 Subscriber app (the consumer / customer):
 
