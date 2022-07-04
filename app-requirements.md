@@ -8,7 +8,7 @@ For this milestone we prove that we can bring the key components together, demon
 
 All apps:
 
-- Should authenticate with Ably using a raw API key
+- Should authenticate with Ably using a raw API key, which may be embedded in the app
 - Must Consume the SDK from the same public distribution point that we release to normally (i.e. Maven Central / SPM)
 - Must use latest versions of development tools / foundational frameworks as provided by Google or Apple
 - Should prefer best practice, modern patterns, as recommended by Google or Apple
@@ -17,6 +17,7 @@ All apps:
 
 Publisher app (the rider):
 
+- May embed the MapBox access token in the app
 - Must ensure that GPS permission is requested when using the app
 - Should create an AAT trackable when given an ID and a destination
 - Make sure the publish rate of GPS locations is dependent on the battery level and on whether someone is subscribing from the feed as well as proximity to destination
@@ -36,12 +37,14 @@ For this milestone we improve on the simplistic solution by bring in additional 
 
 All apps:
 
-- Must authenticate with Ably using token authentication
-- Must use [the demo backend service](https://github.com/ably/asset-tracking-backend-demo)
+- Must use [the demo backend service](https://github.com/ably/asset-tracking-backend-demo), via HTTPS
+- Must authenticate with Ably using token authentication, with tokens obtained from the backend service
+- Must not embed any API keys or access tokens in the app
 
 Publisher app (the rider):
 
 - Must use the backend service to accept delivery jobs
+- Must source MapBox access token from the backend service
 - Should make sure the publish rate of GPS locations is dependent on the battery level and on whether someone is subscribing from the feed as well as proximity to destination
 - Must support stacked deliveries - publishing updates for more than one trackable at any given time
 
