@@ -21,7 +21,7 @@ Those deliveries could be food, groceries or other packages ordered for home del
 - **Subscriber App**: Used by customers / consumers, to track their delivery.
   - [Android](https://github.com/ably/asset-tracking-android-customer-app-demo)
   - [iOS](https://github.com/ably/asset-tracking-ios-customer-app-demo)
-  - Web (repository link TBC)
+  - [Web](https://github.com/ably/asset-tracking-web-customer-app-demo)
 
 ## Requirements
 
