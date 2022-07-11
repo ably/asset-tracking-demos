@@ -66,7 +66,7 @@ Subscriber app (the consumer / customer):
 
 This milestone is yet to be scoped out fully but it is expected to add:
 
-- the concept of "rider state", likely including "accepted the delivery", "waiting at the merchant", "has picked up your deivery" / "is on the way", "is nearby", "is here" and "delivered"
+- the concept of "rider state", likely including "accepted the delivery", "waiting at the merchant", "has picked up your deivery" / "is on the way", "is nearby", "is here", "will not deliver" and "delivered"
 - capability to build the demo app to use Mapbox maps rendering, instead of Google on Android/Web, or Apple on iOS - a choice that the app source code configuration should allow at build time (not a runtime switch)
 - support for push notifications to the subscriber app, including key events such as when the delivery has been picked up from the merchant and when the item has been delivered
 
