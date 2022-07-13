@@ -11,7 +11,7 @@
 * **Expected result:** _Location is updated correctly._
 
 ### [GPS_003]
---
+---
 *  **Test case name:**  _GPS accuracy while using other navigation apps._
 *  Description: The GPS location is processed corretcly when the user uses another navigation app simultaneously.
 *  **Expected result:** _Location is updated correctly._
