@@ -29,6 +29,6 @@ _2. In case when permissions are given -> user will not be asked about any permi
 
 ### [Permissions_005]
 ---
-*  **Test case name:**  _Appkileld while GPS permission dialog is presented._
+*  **Test case name:**  _App killed while GPS permission dialog is presented._
 *  Description: Check the app behavior when the user kills the app when permissions are determined.
 *  **Expected result:** _Permissions question is presented to the user when the app is opened next time._
