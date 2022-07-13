@@ -7,7 +7,7 @@
 ### [General_002]
 ---
 *  **Test case name:**  _Creating Trackable ID._
-*  Description: User can to create trackabel ID.
+*  Description: User can create trackable ID.
 *  **Expected result:** _Trackable ID is created._
 
 ### [General_003]
