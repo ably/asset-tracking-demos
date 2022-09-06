@@ -44,23 +44,28 @@ For this milestone we improve on the simplistic solution by bring in additional 
 All apps:
 
 - Must use [the demo backend service](https://github.com/ably/asset-tracking-backend-demo), via HTTPS
+- Must accept backend service credentials at runtime and store them locally for future use
 - Must authenticate with Ably using token authentication, with tokens obtained from the backend service
 - Must not embed any API keys or access tokens in the app
+  - Google Maps API is an exception because google tooling only supports [providing it at compile time](https://developers.google.com/maps/documentation/android-sdk/config#step_3_add_your_api_key_to_the_project)
+
 
 Publisher app (the rider):
 
-- Must use the backend service to accept delivery jobs
+- Must use the backend service to accept delivery jobs by entering order id
 - Must source Mapbox access token from the backend service
 - Should make sure the publish rate of GPS locations is dependent on the battery level and on whether someone is subscribing from the feed as well as proximity to destination
 - Must support stacked deliveries - publishing updates for more than one trackable at any given time
+- Must allow users to export location logs to support QA
 
 Subscriber app (the consumer / customer):
 
-- Must use the backend service to generate an order for delivery - TBC whether this is simply by entering order id into the app, or perhaps by getting a list of active orders that can be accepted
+- Must use the backend service to generate an order for delivery by entering order starting location and the destination
 - Should configure the resolution based on the user’s behaviour (if the app is in the background, or the user is looking at a different page: we don’t need a high resolution)
-- Should ideally, when the tracker is 10 m from the address, remove the map and mention the food is here
-- Android:
-  - Must source Google Maps API key from the backend service
+- Should ideally, when the tracker is 50 m from the address, remove the map and mention the food is here
+- Must display last location update interval as well as a rolling average of the last five update intervals
+
+## Future Milestones
 
 ## Milestone 3: Enhanced
 
@@ -69,8 +74,6 @@ This milestone is yet to be scoped out fully but it is expected to add:
 - the concept of "rider state", likely including "accepted the delivery", "waiting at the merchant", "has picked up your deivery" / "is on the way", "is nearby", "is here", "will not deliver" and "delivered"
 - capability to build the demo app to use Mapbox maps rendering, instead of Google on Android/Web, or Apple on iOS - a choice that the app source code configuration should allow at build time (not a runtime switch)
 - support for push notifications to the subscriber app, including key events such as when the delivery has been picked up from the merchant and when the item has been delivered
-
-## Future Milestones
 
 ### Idea: Multiple Map Rendering Engines
 
