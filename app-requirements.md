@@ -62,7 +62,7 @@ Subscriber app (the consumer / customer):
 
 - Must use the backend service to generate an order for delivery by entering order starting location and the destination
 - Should configure the resolution based on the user’s behaviour (if the app is in the background, or the user is looking at a different page: we don’t need a high resolution)
-- Should ideally, when the tracker is 50 m from the address, remove the map and mention the food is here
+- Should ideally, when the tracker is 50 m from the address, remove the map and mention the food is here. 10 m threshold proved to be too small given the gps accuracy.
 - Must display last location update interval as well as a rolling average of the last five update intervals
 
 ## Future Milestones
